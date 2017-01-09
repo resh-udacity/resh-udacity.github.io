@@ -1,40 +1,34 @@
 ## Website Performance Optimization portfolio project
 
-Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).
-
-To get started, check out the repository and inspect the code.
-
-### Getting started
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
 
-Some useful tips to help you get started:
+**Optimizations performed**
 
-1. Check out the repository
-1. To inspect the site on your phone, you can run a local server
+* Inlined *style.css*
+* Added media='print' for print.css
+* Removed link of the google font
+* Added async for the js script files
+* Moved the script files to the bottom
+* Optimized images , including *pizzeria.jpg* in *views/images*
+* Applied similar optimisations in the three links in *index.html*
 
-  ```bash
-  $> cd /path/to/your-project-folder
-  $> python -m SimpleHTTPServer 8080
-  ```
+**Page-speed Insights score**
 
-1. Open a browser and visit localhost:8080
-1. Download and install [ngrok](https://ngrok.com/) to the top-level of your project directory to make your local server accessible remotely.
-
-  ``` bash
-  $> cd /path/to/your-project-folder
-  $> ./ngrok http 8080
-  ```
-
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
-
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
+Mobile : 94 / 100
+Desktop : 96 / 100
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js. 
+**Optimizations performed**
 
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+* `changePizzaSizes()` edited so that unnecessary calculations are avoided (line 425 in *main.js*)
+* Reduced the number of iterations for pizzas from 200 to 50 (line 516 in *main.js*)
+* Added css style `will-change:transform` to create layers to optimize paint time (line 36 in *style.css*)
+
+Other possible optimizations
+* Minify html
+* Minify CSS
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
