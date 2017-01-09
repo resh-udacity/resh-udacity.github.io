@@ -16,8 +16,8 @@
 **Page-speed Insights score**
 
 https://resh-udacity.github.io/
-Mobile : 92 / 100
-Desktop : 95 / 100
+* Mobile : 92 / 100
+* Desktop : 95 / 100
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
